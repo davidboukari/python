@@ -1,5 +1,92 @@
 # python
 
+* See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
+## install the Package
+```
+pip install tox
+pip install setuptools 
+pip install setuptools 
+pip install --upgrade pip
+pip install corage
+pip install coverage
+pip install pytest-cov
+pip install flake8
+pip install prettyprinter 
+pip install pylint
+pip install setuptools
+pip install wheel 
+```
+
+## pytest Coverage
+```
+pytest -v --tb=short  --cov=app -cov-branch --cov-report xml:coverage.xml --junitxml report.xml 
+```
+
+### flake8
+```
+ flake8 --max-line-length=150 --max-complexity=10
+```
+
+## tox
+
+```
+cat tox.ini
+[tox]
+envlist = py38
+skipsdist = True
+
+[flake8]
+max-line-length=150
+max-complexity=13
+#filename = app
+
+[testenv]
+deps = -r requirements.txt
+commands= pytest
+          flake8 app tests
+          pylint app
+
+[pytest]
+addopts  = -v
+           --tb=short
+           --cov=app
+           -cov-branch
+           --cov-report xml:coverage.xml
+           --junitxml report.xml
+```
+
+### Execute tox
+```
+tox -r
+```
+
+### Create the setup.py
+```
+from setuptools import setup, find_packages
+
+setup(name="jenkins-test-pipeline",
+      version="0.0.1",
+      description="A pipeline test with alert managing https://github.com/davidboukari/jenkins-test-pipeline.git",
+      author="David Boukari",
+      author_email="davidboukari@gmail.com",
+      packages=find_packages(),
+      install_requires=[
+            'appdirs==1.4.4',
+            'astroid==2.5.6',
+            ...
+      ],
+      license="Apache 2.0"
+      )
+
+```
+
+```
+python setup.py sdist
+python setup.py bdist_wheel
+
+```
+
+
 ## Docstrings
 * https://www.programiz.com/python-programming/docstrings
 
