@@ -112,7 +112,7 @@ Remote storage: https://pypi.python.org/
 Blob storage: python
 ```
 
-### Configure pip 
+### Configure pip  and upload the package
 ```
 cat .pypirc
 [distutils]
@@ -123,7 +123,12 @@ repository = http://<IP_NEXUS>:8081/repository/pypi-hawksys/
 trusted-host = <IP_NEXUS>
 username = admin
 password = xxxxxxxxx
+
+
+python setup.py sdist bdist_egg upload -r nexus-pypi
 ```
+
+
 
 ## Docstrings
 * https://www.programiz.com/python-programming/docstrings
