@@ -128,6 +128,10 @@ password = xxxxxxxxx
 python setup.py sdist bdist_egg upload -r nexus-pypi
 ```
 
+### Install package from a private repo
+```
+pip install --index-url=http://<IP_NEXUS>:8081/repository/pypi-hawksys/  --trusted-host <IP_NEXUS>  jenkins-test-pipeline
+```
 
 
 ## Docstrings
