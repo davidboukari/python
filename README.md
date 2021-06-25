@@ -87,6 +87,44 @@ python setup.py bdist_wheel
 ```
 
 
+
+
+## Upload a package to nexus
+* Create the repository: https://www.nova-technology.fr/2019/03/27/repository-python/
+
+* Create a blob python
+```
+Type: File
+Name: pytho
+```
+
+* Configure a private repo
+```
+Name: pypi-hawksys
+Format: pypi
+Type: hosted
+blob store: python
+```
+
+* Create a proxy repo of https://pypi.python.org/
+```
+Remote storage: https://pypi.python.org/
+Blob storage: python
+```
+
+### Configure pip 
+```
+cat .pypirc
+[distutils]
+index-servers=nexus-pypi
+
+[nexus-pypi]
+repository = http://<IP_NEXUS>:8081/repository/pypi-hawksys/
+trusted-host = <IP_NEXUS>
+username = admin
+password = xxxxxxxxx
+```
+
 ## Docstrings
 * https://www.programiz.com/python-programming/docstrings
 
