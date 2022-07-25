@@ -1,5 +1,12 @@
 # python
 
+# String format
+```
+f'{0} '.format(myval)
+f'{array[0]}'
+
+```
+
 * See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
 ## install the Package
 ```
