@@ -121,6 +121,16 @@ dico={'cle1':123, 'cle2':[12,234.21,45], 'cle3':['item0', 'item1']}
 dico
 {'cle1': 123, 'cle2': [12, 234.21, 45], 'cle3': ['item0', 'item1']}
 
+dico={'cle1':123, 'cle2':[12,234.21,45], 'cle3':['item0', 'item1']}
+dico
+{'cle1': 123, 'cle2': [12, 234.21, 45], 'cle3': ['item0', 'item1']}
+dico['cle3']
+['item0', 'item1']
+dico['cle3'][1]
+'item1'
+
+dico['cle3'][1].upper()
+'ITEM1'
 ```
 
 
