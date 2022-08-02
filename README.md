@@ -199,7 +199,7 @@ tup.count(2)
 
 
 ```
-## Files
+## Files open() : default is ro  => the + permit to update ex: w+ read,write a+: Read write append
 ```
 file = open('test.txt')
 file.read()
@@ -260,6 +260,14 @@ with open('test.txt') as file:
 content
 'line1 ...\nline2...\n'
 
+# Append
+file = open('test.txt','a+')
+file.write('new line')
+8
+file.seek(0)
+0
+file.readlines()
+['line1 ...\n', 'line2...\n', 'new line']
 
 ```
 
