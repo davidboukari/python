@@ -171,6 +171,15 @@ set(list3)
 {1, 2, 3, 5, 9, 10}
 ```
 
+## Boolean
+```
+bol=True
+bol
+True
+1>2
+False
+```
+
 * See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
 ## install the Package
 ```
