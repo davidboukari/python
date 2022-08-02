@@ -8,6 +8,7 @@ f'{array[0]}'
 
 print('ma chaine ' + chaine1 )
 
+# number with nb number after comma .
 print('nombre %1.2f' % (123.123456))
 nombre 123.12
 
