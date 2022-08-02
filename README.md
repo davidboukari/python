@@ -25,6 +25,9 @@ chaine='machaine' - number=1234.456
 # format
 print('{p} toi !!! {p} à vous !!!'.format(p='Bonjour'))
 Bonjour toi !!! Bonjour à vous !!!
+
+print('{a} toi !!! {b} à vous !!!'.format(a='Bonjour', b=123))
+Bonjour toi !!! 123 à vous !!!
 ```
 
 * See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
