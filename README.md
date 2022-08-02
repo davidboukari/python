@@ -298,6 +298,71 @@ else:
 Welcome to the bank
 ```
 
+## for
+```
+liste = [1,2,3,4]
+for num in liste:
+    print('This is the number: %i' % (num))
+This is the number: 1
+This is the number: 2
+This is the number: 3
+This is the number: 4
+
+
+liste = [ 1, 2, 3, 4, 5, 6]
+for num in liste:
+    if num % 2 == 0:
+        print('%i is pair' % num)
+    else:
+        print('%i is impair' % num)
+    
+1 is impair
+2 is pair
+3 is impair
+4 is pair
+5 is impair
+6 is pair
+
+comp=0
+for num in liste:
+    comp += num
+print('Total is: %i' % comp)
+Total is: 21
+
+liste_of_tuple=[(1,2),(3,4),(5,6,7)]
+liste_of_tuple
+[(1, 2), (3, 4), (5, 6, 7)]
+for elem in liste_of_tuple:
+    print(elem)
+(1, 2)
+(3, 4)
+(5, 6, 7)
+
+liste_of_tuple=[(1,2),(3,4),(5,6)]
+for (m,n) in liste_of_tuple:
+    print(n)
+2
+4
+6
+
+#print dico
+dico={'cle1': 1, 'cle2': 2, 'cle3': 3}
+for item in dico:
+    print(item)
+cle1
+cle2
+cle3
+for (cle,val) in dico.items():
+    print(cle)
+    print(val)
+cle1
+1
+cle2
+2
+cle3
+3
+
+```
 
 * See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
 ## install the Package
