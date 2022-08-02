@@ -14,6 +14,9 @@ nombre 123.12
 
 print('ma chaine %s' % ('est ici'))
 ma chaine est ici
+
+print('chaine=%s - number=%1.2F' % ('machaine', 1234.456))
+chaine=machaine - number=1234.46
 ```
 
 * See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
