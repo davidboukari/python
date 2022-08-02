@@ -82,6 +82,29 @@ list1
 list1.reverse()
 list1
 [3, 2, 1]
+
+list2=['z','a','d','b']
+list2.sort()
+list2
+['a', 'b', 'd', 'z']
+
+# matrice
+l1=[1,2,3
+l2=[4,5,6
+l3=[7,8,9]
+matrice=[l1,l2,l3]
+matrice
+[[1, 2, 3], [4, 5, 6], [7, 8, 9]
+matrice[0]
+[1, 2, 3]
+
+matrice[1][2]
+6
+
+# list comprehension
+col = [ ligne[0] for ligne in matrice]
+col
+[1, 4, 7]
 ```
 
 * See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
