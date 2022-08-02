@@ -41,7 +41,7 @@ ma_liste * 2
 ['une chaine', 245.23124, 'o', 'new element', 'une chaine', 245.23124, 'o', 'new element']
 ```
 
-## List [] elements are indexed by number
+## List [] => [1, 'element', 'test', 12.567 ] elements are indexed by number
 ```
 ma_liste=['une chaine',245.23124,'o']
 len(ma_liste)
@@ -108,7 +108,7 @@ col
 ```
 
 
-## Dico {} => hash table elements are indexed by index name
+## Dico {} => {'ele1':'val1', 'test':'no' }hash table elements are indexed by index name
 ```
 dico={'cle1':'val1', 'cle2':'val2'}
 dico
@@ -179,6 +179,65 @@ True
 1>2
 False
 ```
+
+
+## Tuples () => (1,2,3) Immutable (cannot be updated) - no reaffectation - no append
+```
+
+tup=["un",2,'trois']
+
+# Get the index of a search value
+tup.index('un')
+0
+tup.index(2)
+1
+
+# nb occc
+tup=["un",2,'trois',2,4,'aa',2]
+tup.count(2)
+3
+
+
+```
+## Files
+```
+file = open('test.txt')
+file.read()
+'This is a test\n'
+
+file.seek(0)
+0
+file.read()
+'This is a test\n'
+
+
+#Get a list off all lines
+file.seek(0)
+0
+file.readlines()
+['This is a test\n']
+
+
+#Read Write 
+file = open('test.txt','w+')
+file.write('new line')
+8
+file.readlines()
+[]
+file.seek(0)
+0
+file.readlines()
+['new line']
+
+#for all lines
+for line in open('test.txt'):
+    print(line)
+    
+line1 ...
+line2...
+
+```
+
 
 * See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
 ## install the Package
