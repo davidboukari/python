@@ -41,7 +41,7 @@ ma_liste * 2
 ['une chaine', 245.23124, 'o', 'new element', 'une chaine', 245.23124, 'o', 'new element']
 ```
 
-## List
+## List [] elements are indexed by number
 ```
 ma_liste=['une chaine',245.23124,'o']
 len(ma_liste)
@@ -106,6 +106,14 @@ col = [ ligne[0] for ligne in matrice]
 col
 [1, 4, 7]
 ```
+
+
+## Dico {} => hash table elements are indexed by index name
+```
+
+
+```
+
 
 * See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
 ## install the Package
