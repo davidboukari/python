@@ -6,6 +6,8 @@ f'{0} '.format(myval)
 f'{array[0]}'
 
 
+print('ma chaine ' + chaine1 )
+print('ma chaine {0}'.format(macchaine1) )
 print('ma chaine %s' % {chaine1} )
 ```
 
