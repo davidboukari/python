@@ -269,8 +269,33 @@ file.seek(0)
 file.readlines()
 ['line1 ...\n', 'line2...\n', 'new line']
 
+```
+
+## if elif else
+```
+if 2 > 1:
+    print('case 1')
+elif 5 < 7:
+    print('case 2')
+else:
+    print('case 3')
 
 
+bool=False
+if bool:
+    print('bool is true')
+else:
+    print('bool is false')
+bool is false
+
+lieu = 'Bank'
+if lieu == 'Shop':
+    print('Welcome to the Shop')
+elif lieu == 'Bank':
+    print('Welcome to the bank')
+else:
+    print('Where are you?')
+Welcome to the bank
 ```
 
 
