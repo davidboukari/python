@@ -28,6 +28,17 @@ Bonjour toi !!! Bonjour à vous !!!
 
 print('{a} toi !!! {b} à vous !!!'.format(a='Bonjour', b=123))
 Bonjour toi !!! 123 à vous !!!
+
+ma_liste + ['new element']
+['une chaine', 245.23124, 'o', 'new element']
+
+
+ma_liste = ma_liste + ['new element']
+ma_liste
+['une chaine', 245.23124, 'o', 'new element']
+
+ma_liste * 2
+['une chaine', 245.23124, 'o', 'new element', 'une chaine', 245.23124, 'o', 'new element']
 ```
 
 ## List
