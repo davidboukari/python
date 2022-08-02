@@ -236,6 +236,31 @@ for line in open('test.txt'):
 line1 ...
 line2...
 
+
+file.seek(0)
+0
+print(file.read())
+line1 ...
+line2...
+
+
+file.seek(0)
+0
+content = file.readlines()
+print(content)
+['line1 ...\n', 'line2...\n']
+
+# do not forget to close
+file.close()
+
+# With syntax
+with open('test.txt') as file:
+    content = file.read()
+    
+content
+'line1 ...\nline2...\n'
+
+
 ```
 
 
