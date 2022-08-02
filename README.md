@@ -5,6 +5,8 @@
 f'{0} '.format(myval)
 f'{array[0]}'
 
+
+print('ma chaine %s' % {chaine1} )
 ```
 
 * See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
