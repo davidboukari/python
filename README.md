@@ -30,6 +30,29 @@ print('{a} toi !!! {b} à vous !!!'.format(a='Bonjour', b=123))
 Bonjour toi !!! 123 à vous !!!
 ```
 
+## List
+```
+ma_liste=['une chaine',245.23124,'o']
+len(ma_liste)
+3
+ma_liste[0]
+'une chaine'
+
+print(ma_liste)
+['une chaine', 245.23124, 'o']
+
+print(*ma_liste)
+une chaine 245.23124 o
+
+print(*ma_liste, sep=',')
+une chaine,245.23124,o
+
+ma_liste[1:]
+[245.23124, 'o']
+
+
+```
+
 * See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
 ## install the Package
 ```
