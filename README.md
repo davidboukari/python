@@ -110,7 +110,16 @@ col
 
 ## Dico {} => hash table elements are indexed by index name
 ```
+dico={'cle1':'val1', 'cle2':'val2'}
+dico
+{'cle1': 'val1', 'cle2': 'val2'}
 
+dico['cle2']
+'val2'
+
+dico={'cle1':123, 'cle2':[12,234.21,45], 'cle3':['item0', 'item1']}
+dico
+{'cle1': 123, 'cle2': [12, 234.21, 45], 'cle3': ['item0', 'item1']}
 
 ```
 
