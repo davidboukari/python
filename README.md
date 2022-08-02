@@ -61,7 +61,27 @@ une chaine,245.23124,o
 ma_liste[1:]
 [245.23124, 'o']
 
+# Append or pop element in the list
+list1=[1,2,3]
+list1.append(4)
+list1
+[1, 2, 3, 4]
+list1.pop(2)
+3
+list1
+[1, 2, 4]
 
+# pop with no parameter extract and remove the lastlist1.pop()
+4
+list1
+[1, 2]
+
+list1=[1,2,3]
+list1
+[1, 2, 3]
+list1.reverse()
+list1
+[3, 2, 1]
 ```
 
 * See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
