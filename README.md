@@ -7,8 +7,12 @@ f'{array[0]}'
 
 
 print('ma chaine ' + chaine1 )
-print('ma chaine {0}'.format(macchaine1) )
-print('ma chaine %s' % {chaine1} )
+
+print('nombre %1.2f' % (123.123456))
+nombre 123.12
+
+print('ma chaine %s' % ('est ici'))
+ma chaine est ici
 ```
 
 * See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
