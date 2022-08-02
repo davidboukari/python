@@ -131,8 +131,45 @@ dico['cle3'][1]
 
 dico['cle3'][1].upper()
 'ITEM1'
+
+dico['cle1']
+123
+dico['cle1'] -= 23
+dico['cle1']
+100
+
+dico={}
+dico['reponse']='chien'
+dico
+{'reponse': 'chien'}
+
+dico={'cle1':1, 'cle2':2, 'cle3':3}
+dico
+{'cle1': 1, 'cle2': 2, 'cle3': 3}
+dico.keys()
+dict_keys(['cle1', 'cle2', 'cle3'])
+dico.values()
+dict_values([1, 2, 3])
+
+## tuples
+dico.items()
+dict_items([('cle1', 1), ('cle2', 2), ('cle3', 3)])
 ```
 
+## Set remove double and sort 
+```
+my_set=set()
+my_set
+set()
+my_set.add(1)
+my_set.add(2)
+my_set
+{1, 2}
+
+list3=[9,1,5,10,3,2]
+set(list3)
+{1, 2, 3, 5, 9, 10}
+```
 
 * See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
 ## install the Package
