@@ -21,6 +21,10 @@ chaine=machaine - number=1234.46
 # auto conversion %r
 print('chaine=%r - number=%r' % ('machaine', 1234.456))
 chaine='machaine' - number=1234.456
+
+# format
+print('{p} toi !!! {p} à vous !!!'.format(p='Bonjour'))
+Bonjour toi !!! Bonjour à vous !!!
 ```
 
 * See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
