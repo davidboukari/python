@@ -364,6 +364,38 @@ cle3
 
 ```
 
+# while
+```
+while test:
+  action
+else:
+  action when false
+  
+while x < 4:
+    print(x)
+    x += 1
+    
+0
+1
+2
+3
+
+# finished
+x = 0
+while x < 4:
+    print(x)
+    x += 1
+else:
+    print('Completed')
+0
+1
+2
+3
+Completed
+
+```
+
+
 * See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
 ## install the Package
 ```
