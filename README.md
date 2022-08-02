@@ -269,6 +269,8 @@ file.seek(0)
 file.readlines()
 ['line1 ...\n', 'line2...\n', 'new line']
 
+
+
 ```
 
 
