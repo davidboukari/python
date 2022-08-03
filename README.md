@@ -928,6 +928,80 @@ list(filter(lambda x: x % 2 == 0, l))
 [0, 2, 4, 6, 8]
 ```
 
+## enumerate  => return a list with index number order
+```
+l = [ 'a', 'b', 'cc']
+for n, item in enumerate(l):
+    print(n,item)
+    
+0 a
+1 b
+2 cc
+
+for n, item in enumerate(l):
+    if n > 1:
+        break;
+    else:
+        print(item)
+        
+a
+b
+
+
+```
+
+## all & any
+* all => return True if all if True
+* any return True if at least 1 element is True
+```
+l = [True, True, False, True]
+all(l)
+False
+any(l)
+True
+```
+
+## complex
+```
+complex(2,3)
+(2+3j)
+complex(2,3) + complex(4,5)
+(6+8j)
+
+complex('2+3j')
+(2+3j)
+```
+
+## zip tranforme list to dico  stop to the lower list
+```
+l1=[1,2,3]
+l2=[4,5,6]
+list(zip(l1,l2))
+[(1, 4), (2, 5), (3, 6)]
+l3=[7,8,9]
+list(zip(l1,l2,l3))
+[(1, 4, 7), (2, 5, 8), (3, 6, 9)]
+
+[(1, 4, 7), (2, 5, 8), (3, 6, 9)]
+l4=[10,11,12,13,14,15]
+list(zip(l1,l4))
+[(1, 10), (2, 11), (3, 12)]
+
+# with dico
+d = dict(zip(l1,l2))
+d
+{1: 4, 2: 5, 3: 6}
+
+
+key={'chat', 'chien'}
+value={'miaou','waf'}
+dict(zip(key,value))
+{'chien': 'waf', 'chat': 'miaou'}
+
+
+```
+
+
 * See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
 ## install the Package
 ```
