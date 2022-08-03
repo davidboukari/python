@@ -509,6 +509,28 @@ True
 is_first(6)
 6 is not first
 False
+
+import math
+def is_first_quick(num):
+    '''
+    Test if the number is first
+    :param num: the number to test
+    :return: Boolean
+        True: if num is first
+        False: if num is not first
+    '''
+    # Test all pair
+    if num % 2 == 0:
+        return False
+    # Test impair
+    for x in range(3,int(math.sqrt(num)) + 1, 2):
+        if num % x == 0:
+            return False
+    return True
+is_first_quick(11)
+True
+is_first_quick(6)
+False
 ```
 
 
