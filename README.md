@@ -136,6 +136,8 @@ col
 
 ## Dico {} => {'ele1':'val1', 'test':'no' }hash table elements are indexed by index name
 ```
+.keys() or .values()
+
 dico={'cle1':'val1', 'cle2':'val2'}
 dico
 {'cle1': 'val1', 'cle2': 'val2'}
@@ -1001,6 +1003,36 @@ dict(zip(key,value))
 
 ```
 
+## Decorator
+```
+globals().keys()
+
+dict_keys(['__name__', '__doc__', '__package__', '__loader__', '__spec__', '__file__', '__builtins__', 'sys', 'square', 'carre', 'pair', 'first_char', 'verlan', 'add', 'str', 'Example', 'myobj', 'Chien', 'sam', 'Cercle', 'c', 'Animal', 'a', 'Livre', 'math', 'pi', 'sqrt', 'file', '__warningregistry__', 'askInteger', 'askIntegerRob', 'farenheit', 'celsius', 'temp', 'F_temp', 'is_pair', 'l', 'n', 'item', 'l1', 'l2', 'l3', 'l4', 'd', 'key', 'value'])
+
+
+globals()['c']
+<__main__.Chien object at 0x7fe97a657dd0>
+
+globals().values()
+
+dict_values(['__main__', None, '', ...
+
+# copy a function to a var create a new function can delete the older without deleted the new function
+def bonjour(nom='me'):
+    return 'hello %s'  % nom 
+bonjour
+<function bonjour at 0x7fe97a64b290>
+bonjour()
+'hello me'
+save_bonjour = bonjour
+save_bonjour()
+'hello me'
+
+del bonjour
+save_bonjour()
+'hello me'
+
+```
 
 * See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
 ## install the Package
