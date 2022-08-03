@@ -788,6 +788,54 @@ del o
 
 ```
 
+## Modules & Packages
+* https://docs.python.org/3/tutorial/modules.html
+```
+import math
+math.pi
+3.141592653589793
+math.sqrt(2)
+1.4142135623730951
+pi
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/code.py", line 90, in runcode
+    exec(code, self.locals)
+  File "<input>", line 1, in <module>
+NameError: name 'pi' is not defined
+math.pi
+3.141592653589793
+from math import pi
+pi
+3.141592653589793
+
+from math import pi, sqrt
+sqrt(4)
+2.0
+
+
+## Describe a lib with dir()
+dir(math)
+['__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh', 'ceil', 'copysign', 'cos', 'cosh', 'degrees', 'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs', 'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'gcd', 'hypot', 'inf', 'isclose', 'isfinite', 'isinf', 'isnan', 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'log2', 'modf', 'nan', 'pi', 'pow', 'radians', 'remainder', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'tau', 'trunc']
+
+
+# Help
+help(math.asin)
+Help on built-in function asin in module math:
+asin(x, /)
+    Return the arc sine (measured in radians) of x.
+    
+    
+## Package
+On peut creer un package: just need to add __init__.py can be empty or 
+Ex:
+cat __init__.py
+__all__ = ["bar"]
+
+Can use __all__ if we do not want that all be accessible
+
+
+```
+
 
 * See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
 ## install the Package
