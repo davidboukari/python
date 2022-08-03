@@ -882,6 +882,52 @@ def askIntegerRob():
     print(val)
 ```
 
+## Integrated functions
+* Map(funcction, listIterable)  apply a function to a list (iterable)
+```
+help(map)
+Help on class map in module builtins:
+class map(object)
+ |  map(func, *iterables) --> map object
+
+def farenheit(temp):
+    return float(9/5) * temp + 32
+def celsius(temp):
+    return float(5/9) * (temp - 32)
+farenheit(37)
+98.60000000000001
+celsius(100)
+37.77777777777778
+temp = [ 0, 22.5, 40, 100]
+F_temp = list(map(farenheit, temp))
+F_temp
+[32.0, 72.5, 104.0, 212.0]
+
+list(map(lambda x: float(5/9) * (x - 32), F_temp))
+[0.0, 22.5, 40.0, 100.0]
+```
+
+## filter(function, iterable)  filter a list
+```
+def is_pair(x):
+    if x % 2 == 0:
+        return True
+l  = range(0,10)
+l
+range(0, 10)
+print(l)
+range(0, 10)
+list(l)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+filter(is_pair, l)
+<filter object at 0x7fe97a68c910>
+list(filter(is_pair, l))
+[0, 2, 4, 6, 8]
+
+list(filter(lambda x: x % 2 == 0, l))
+[0, 2, 4, 6, 8]
+```
+
 * See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
 ## install the Package
 ```
