@@ -393,6 +393,122 @@ else:
 3
 Completed
 
+
+x = 0
+while x < 5:
+    print(x)
+    x += 1
+    if(x == 3):
+        print('Ok x == 3')
+        break;
+    else:    
+        continue
+0
+1
+2
+Ok x == 3
+
+```
+
+## Range default start = 0 (evantail) range(start, nbnumber)
+```
+list(range(0,10) ) is same as list(range(10))
+
+list(range(0,10))
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+my_range = range(0,10)
+type(my_range)
+<class 'range'>
+
+start=0
+stop=20
+list(range(start,stop))
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+
+# witth step
+start=0
+stop=20
+step=2
+list(range(start,stop,step))
+[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+```
+
+## List in comprehension
+```
+liste = [ x for x in 'example']
+liste
+['e', 'x', 'a', 'm', 'p', 'l', 'e']
+
+['e', 'x', 'a', 'm', 'p', 'l', 'e']
+liste = [ x for x in range(0,11)]
+liste
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Square
+liste = [ x**2 for x in range(0,11)]
+
+# Pair
+liste = [ x for x in range(0,11) if x % 2 == 0]
+liste
+[0, 2, 4, 6, 8, 10]
+liste
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+## Root Square
+liste = [ x**0.5 for x in range(0,11) if x % 2 == 0]
+liste
+[0.0, 1.4142135623730951, 2.0, 2.449489742783178, 2.8284271247461903, 3.1622776601683795]
+
+
+# Convert °C to °F
+celcius = [ 0, 10, 20.1, 34.5]
+farenheint = [ (9/5) * temp + 32 for temp in celcius]
+farenheint
+[32.0, 50.0, 68.18, 94.1]
+```
+
+## Functions  => def my_function(param0, param1, ..., paramn):
+```
+def my_function(param0, param1, ..., paramn):
+  '''
+  doc function
+  '''
+  
+* Built-in functions https://docs.python.org/3/library/functions.html  
+
+def ajoute(nbr1, nbr2):
+  return nbr1 + nbr2
+
+
+# Low typage
+def ajoute(nbr1, nbr2):
+    return nbr1 + nbr2
+ajoute(1,2)
+3
+ajoute('un','deux')
+'undeux'
+
+
+def is_first(num):
+    '''
+    :param num: number to test
+    :return: True or False
+    '''
+    for x in range(2, num):
+        if num % x == 0:
+            print('%r is not first' % num)
+            return False
+            break
+    else:
+        print('%r is First' % num)
+        return True
+is_first(11)
+11 is First
+True
+is_first(6)
+6 is not first
+False
 ```
 
 
