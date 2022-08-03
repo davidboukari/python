@@ -1,5 +1,13 @@
 # python
 
+# help
+```
+ex: help(list.reverse)
+Help on method_descriptor:
+reverse(self, /)
+    Reverse *IN PLACE*.
+```
+
 # String format
 ```
 f'{0} '.format(myval)
@@ -469,6 +477,8 @@ farenheint
 ```
 
 ## Functions  => def my_function(param0, param1, ..., paramn):
+* Function not in an object
+* Methode in object  object.methode()
 ```
 def my_function(param0, param1, ..., paramn):
   '''
@@ -531,6 +541,61 @@ is_first_quick(11)
 True
 is_first_quick(6)
 False
+
+
+help(list.reverse)
+Help on method_descriptor:
+reverse(self, /)
+    Reverse *IN PLACE*.
+    
+    
+# LEGB Local Enclosing Global Built-in  function always can get Global var
+Order is
+* Local domain of the function
+* Domain of the caller
+* global domain
+* domain var buit-in python
+
+# use global to be sur to access a global var in a functionglobal mavar 
+# To see all global vars: globals()
+globals()
+{'__name__': '__main__', '__doc__': None, '__package__': '', ..., 
+
+
+# Lambda expressions: Quick function
+def square(num):
+    '''
+    Return the num^2  => num**2
+    :param num: the number
+    :return: the square of the number
+    '''
+    return num**2
+square(2)
+4
+
+In lambda expression
+carre = lambda num: num**2
+carre(2)
+4
+
+pair = lambda x: x % 2 == 0
+pair(3)
+False
+pair(6)
+True
+
+first_char = lambda string: string[0]
+first_char('Bonjour')
+'B'
+
+verlan = lambda string: string[::-1]
+verlan('Bonjour')
+'ruojnoB'
+
+add = lambda x,y: x+y
+add(2,3)
+5
+
 ```
 
 
