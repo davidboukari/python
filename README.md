@@ -832,10 +832,55 @@ cat __init__.py
 __all__ = ["bar"]
 
 Can use __all__ if we do not want that all be accessible
-
-
 ```
 
+## Exceptions
+* Built-in list: https://docs.python.org/3/library/exceptions.html
+```
+try:
+    2 + 'chaine'
+except TypeError:
+    print('Type Error')
+    
+Type Error
+
+## finally
+try:
+    file = open("myfile.txt", 'w')
+    file.write("A line")
+except IOError:
+    print("IO Error")
+else:
+    print("line wrote")
+    file.close()
+line wrote
+
+try:
+    file = open('myfile1.txt','r')
+    line = file.read()
+except:
+    print('Error')
+finally:
+    print('This message is always printed')
+    
+Error
+This message is always printed
+
+# while True
+def askIntegerRob():
+    while True:
+        try:
+            val = int(input('Please give an integer'))
+        except:
+            print('It is not an Integer')
+            continue
+        else:
+            print('it is an integer')
+            break
+        finally:
+            print('Always executed')
+    print(val)
+```
 
 * See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
 ## install the Package
