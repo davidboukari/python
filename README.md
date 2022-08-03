@@ -8,6 +8,24 @@ reverse(self, /)
     Reverse *IN PLACE*.
 ```
 
+
+
+
+
+
+# type
+```
+type([])
+<class 'list'>
+type({})
+<class 'dict'>
+type(list)
+<class 'type'>
+str='abc'
+type(str)
+<class 'str'>
+```
+
 # String format
 ```
 f'{0} '.format(myval)
@@ -595,6 +613,178 @@ verlan('Bonjour')
 add = lambda x,y: x+y
 add(2,3)
 5
+
+```
+
+# object => class  for a class the 1st later should be Uppercase
+```
+class MyCclass(param): 
+  self
+
+
+class Example(object):
+    pass
+myobj = Example()
+type(myobj)
+<class '__main__.Example'>
+
+class Chien(object):
+    def __init__(self, race):
+        self.race = race
+sam = Chien(race='Labrador')
+sam
+<__main__.Chien object at 0x7fe97a633790>
+
+sam.race
+'Labrador'
+
+
+class Chien(object):
+    # Class attribute
+    espece = 'mamifere'
+    
+    def __init__(self, race, nom):
+        self.race = race
+        self.nom = nom
+        
+        
+class Cercle(object):
+    '''
+    Class Cercle to draw and manage a circle
+    '''
+    # Class Attributes
+    pi = 3.14
+
+    def __init__(self, rayon=1):
+        self.rayon = rayon
+
+    def surface(self):
+        '''
+        Calculate the surface of the circle
+        :return:
+        '''
+        return Cercle.pi * self.rayon**2
+
+    def definirRayon(self, rayon):
+        '''
+        Set the rayon of the circle
+        :param rayon: rayon of the circle
+        :return:
+        '''
+        self.rayon = rayon
+
+    def obtenirRayon(self):
+        '''
+        Get the rayon
+        :return:
+        '''
+        return self.rayon
+        
+        
+class Animal(object):
+    '''
+    Class Animal ...
+    '''
+    def __init__(self):
+        print('Animal created')
+    def whoiam(self):
+        print('i am an animal')
+    def eat(self):
+        print('i am eating')
+        
+a = Animal()
+Animal created
+a.whoiam()
+i am an animal
+a.eat()
+i am eating
+
+
+class Chien(Animal):
+    '''
+    Class Chien (extends of Animal)
+    '''
+    def __init__(self):
+        Animal.__init__(self)
+        print('Dog created')
+    def whoiam(self):
+        print('I am a dog')
+    def aboie(self):
+        print('ouaf ouaf !!!')
+        
+c = Chien()
+Dog created
+c.whoiam()
+I am a dog
+c.aboie()
+ouaf ouaf !!!
+c.eat()
+i am eating
+
+# Special Method
+## __str__ called by print()  when we want to print an object
+class Livre(object):
+    '''
+    '''
+    def __init__(self, title, author, pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+        print('Book is created')
+    def __str__(self):
+        return 'Title: %s, Author: %s, Pages: %i' % (self.title, self.author, self.pages)
+    
+o = Livre('Les femmes savantes', 'Moliere', 123)
+Book is created
+o
+<__main__.Livre object at 0x7fe97a64d990>
+print(o)
+Title: Les femmes savantes, Author: Moliere, Pages: 123
+
+## __len__ called by len()
+class Livre(object):
+    '''
+    '''
+    def __init__(self, title, author, pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+        print('Book is created')
+    def __str__(self):
+        return 'Title: %s, Author: %s, Pages: %i' % (self.title, self.author, self.pages)
+    def __len__(self):
+        return self.pages
+    
+o = Livre('Les femmes savantes', 'Moliere', 123)
+Book is created
+print(o)
+Title: Les femmes savantes, Author: Moliere, Pages: 123
+len(o)
+123
+
+
+## del when delete an object
+class Livre(object):
+    '''
+    '''
+    def __init__(self, title, author, pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+        print('Book is created')
+    # Called by print
+    def __str__(self):
+        return 'Title: %s, Author: %s, Pages: %i' % (self.title, self.author, self.pages)
+    # Called by len
+    def __len__(self):
+        return self.pages
+    # Called by delete object
+    def __del__(self):
+        print('Delete the book')
+        
+o = Livre('Les femmes savantes', 'Moliere', 123)
+Book is created
+del o
 
 ```
 
