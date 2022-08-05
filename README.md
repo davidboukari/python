@@ -1003,7 +1003,9 @@ dict(zip(key,value))
 
 ```
 
-## Decorator
+## Decorator function in funcction
+* Call function in functon
+* Give a function as parameter
 ```
 globals().keys()
 
@@ -1032,7 +1034,217 @@ del bonjour
 save_bonjour()
 'hello me'
 
+
+# Function as parameter
+def bonjour():
+    print('Bonjour !!!')
+def autre(func):
+    print('Autre call some code')
+    print(func())
+    
+autre(bonjour)
+Autre call some code
+Bonjour !!!
+None
+
 ```
+
+## Iterator & Generator
+* generator: yield to not create the object like list but generate when it is needed
+```
+def gencube(n):
+    liste = []
+    for x in range(n):
+        liste.append(x**3)
+    return liste
+
+# No memory list stockage   with yield
+def gencube2(n):
+    for x in range(n):
+        yield x**3
+
+gencube(5)
+[0, 1, 8, 27, 64]
+gencube2(5)
+<generator object gencube2 at 0x7fe97a3d0050>
+list(gencube2(5)
+[0, 1, 8, 27, 64]
+for x in gencube2(5)
+    print(x)
+
+0
+1
+8
+27
+64
+
+def genfibo(n):
+    a = 1
+    b = 1
+    for x in range(0,n):
+        yield a
+        a,b = b, a+b
+        
+genfibo(10)
+<generator object genfibo at 0x7fe97a3d0050>
+for x in genfibo(10):
+    print(x)
+    
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+
+
+without yield
+def genfibonwithoutyield(n):
+    a = 1
+    b = 1
+    sortie = []
+    for x in range(n):
+        sortie.append(a)
+        a,b = b, a+b
+    return sortie
+    
+genfibonwithoutyield(10)
+[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+
+```
+
+## next iter
+next: Access to the next element in a seq
+iter: Transoform to iter
+```
+def gen_simple():
+    for x in range(3):
+        yield x
+        
+g = gen_simple()
+print(next(g))
+0
+print(next(g))
+1
+print(next(g))
+2
+print(next(g))
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/code.py", line 90, in runcode
+    exec(code, self.locals)
+  File "<input>", line 1, in <module>
+StopIteration
+
+
+s = 'machaine'
+for c in s:
+    print(c)
+    
+m
+a
+c
+h
+a
+i
+n
+e
+next(s)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/code.py", line 90, in runcode
+    exec(code, self.locals)
+  File "<input>", line 1, in <module>
+TypeError: 'str' object is not an iterator
+s_iter = iter(s)
+next(s)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/code.py", line 90, in runcode
+    exec(code, self.locals)
+  File "<input>", line 1, in <module>
+TypeError: 'str' object is not an iterator
+next(s_iter)
+'m'
+next(s_iter)
+'a'
+next(s_iter)
+'c'
+next(s_iter)
+'h'
+next(s_iter)
+'a'
+next(s_iter)
+'i'
+next(s_iter)
+'n'
+next(s_iter)
+'e'
+next(s_iter)
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/code.py", line 90, in runcode
+    exec(code, self.locals)
+  File "<input>", line 1, in <module>
+StopIteration
+
+```
+
+## Counter
+* counter(list) return a list with nb occ each element
+```
+liste=[1,2,5,3,2,6,2,1,4,6,7,7,7,9]
+Counter(liste)
+Counter({2: 3, 7: 3, 1: 2, 6: 2, 5: 1, 3: 1, 4: 1, 9: 1})
+
+Counter('abcdaefbdg')
+Counter({'a': 2, 'b': 2, 'd': 2, 'c': 1, 'e': 1, 'f': 1, 'g': 1})
+
+phrase='combien de fois on trouve des mots dans cette phrase avec de mot, oui combien'
+list_mot = phrase.split()
+list_mot
+['combien', 'de', 'fois', 'on', 'trouve', 'des', 'mots', 'dans', 'cette', 'phrase', 'avec', 'de', 'mot,', 'oui', 'combien']
+Counter(list_mot)
+Counter({'combien': 2, 'de': 2, 'fois': 1, 'on': 1, 'trouve': 1, 'des': 1, 'mots': 1, 'dans': 1, 'cette': 1, 'phrase': 1, 'avec': 1, 'mot,': 1, 'oui': 1})
+
+
+```
+
+## pdb
+```
+import pdb
+x = [1,2,3]
+y = 10
+z = 20
+a = y + z
+pdb.set_trace()
+print(a)
+b = x + y
+> <input>(7)<module>()
+(Pdb) >? x
+[1, 2, 3]
+(Pdb) >? y
+10
+(Pdb) >? x+y
+*** TypeError: can only concatenate list (not "int") to list
+(Pdb) >? display x
+display x: [1, 2, 3]
+(Pdb) >? whatis x
+<class 'list'>
+(Pdb) 
+
+(Pdb) >? help
+Documented commands (type help <topic>):
+========================================
+EOF    c          d        h         list      q        rv       undisplay
+a      cl         debug    help      ll        quit     s        unt      
+alias  clear      disable  ignore    longlist  r        source   until    
+args   commands   display  interact  n         restart  step     up       
+b      condition  down     j         next      return   tbreak   w        
+break  cont       enable   jump      p         retval   u        whatis   
+bt     continue   exit     l         pp        run      unalias  where    
+```
+
 
 * See: https://github.com/davidboukari/jenkins-test-pipeline/blob/dev2/README.md
 ## install the Package
