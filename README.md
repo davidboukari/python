@@ -8,6 +8,8 @@ reverse(self, /)
     Reverse *IN PLACE*.
 ```
 
+* Decorator: function under function (idem java Decorator https://refactoring.guru/fr/design-patterns/decorator/java/example)
+
 * Get keyboard input
 
 ```
