@@ -11,6 +11,11 @@ reverse(self, /)
 * Get keyboard input
 
 ```
+chaine = input('Please give an integer')
+print(chaine)
+Please give an integer>? salut toi
+salut toi
+
 val = int(input('Please give an integer'))
 
 # while True
