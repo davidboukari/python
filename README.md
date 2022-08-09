@@ -8,9 +8,26 @@ reverse(self, /)
     Reverse *IN PLACE*.
 ```
 
+* Get keyboard input
 
+```
+val = int(input('Please give an integer'))
 
-
+# while True
+def askIntegerRob():
+    while True:
+        try:
+            val = int(input('Please give an integer'))
+        except:
+            print('It is not an Integer')
+            continue
+        else:
+            print('it is an integer')
+            break
+        finally:
+            print('Always executed')
+    print(val)
+```
 
 
 # type
