@@ -104,6 +104,10 @@ type(str)
 f'{0} '.format(myval)
 f'{array[0]}'
 
+>>> chaine='ma chaine'
+>>> print(f'chaine={chaine}')
+chaine=ma chaine
+
 
 print('ma chaine ' + chaine1 )
 
