@@ -1,5 +1,10 @@
 # python
 
+## json
+```
+cat file.txt | python3 -m json.tool | vim -
+```
+
 ## range
 ```
 # 0 -> <10. list(range(0, 10)) <=> list(range(10))
