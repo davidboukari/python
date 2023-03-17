@@ -1,5 +1,7 @@
 # python
 
+## Lambda = Anonymous functions
+
 ## json
 ```
 cat file.txt | python3 -m json.tool | vim -
